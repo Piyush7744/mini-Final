@@ -1,0 +1,12 @@
+.Canvas {
+    border-radius: 15px;
+    width: 48%;
+    height: auto;
+    border: solid 1px;
+}
+
+.CanvasContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
