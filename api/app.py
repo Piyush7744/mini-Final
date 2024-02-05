@@ -178,10 +178,13 @@ def GenerateFrames(camera: VideoCamera, displayType: DisplayType):
 @app.route('/video')
 def LiveVideo():
     displayType = request.args.get('type', default='camera', type=str)
-    if (displayType == 'camera'):
-        return Response(GenerateFrames(VideoCamera(), displayType=DisplayType.CameraOverlapDisplay), mimetype='multipart/x-mixed-replace; boundary=frame')
-    elif (displayType == 'blank'):
-        return Response(GenerateFrames(VideoCamera(), displayType=DisplayType.BlankCanvasDisplay), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+    # (Aditya): This is no longer needed as we just stream the blank frame
+    # if (displayType == 'camera'):
+    #     return Response(GenerateFrames(VideoCamera(), displayType=DisplayType.CameraOverlapDisplay), mimetype='multipart/x-mixed-replace; boundary=frame')
+    # elif (displayType == 'blank'):
+
+    return Response(GenerateFrames(VideoCamera(), displayType=DisplayType.BlankCanvasDisplay), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == '__main__':
     app.run(debug=True, host='127.0.0.1', port=5000)
