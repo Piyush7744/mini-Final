@@ -1,0 +1,56 @@
+/* body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+} */
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #131324;
+}
+
+.main-text{
+    width: 50%;
+    font-size: 60px;
+    color: white;
+    margin-left: 5%;
+    margin-top: 80px;
+
+}
+
+.mainn-text{
+    margin-top: 40px;
+    width: 40%;
+    font-size: 20px;
+    margin-left: 5%;
+}
+
+.brand-logo-img{
+    height: 450px;
+    margin-left: 650px;
+    margin-top: -25%;
+}
+
+.start-button{
+        background-color: #4e0eff;
+        color: white;
+        padding: 1rem 2rem;
+        border: 1px solid white;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 0.6rem;
+        font-size: 1rem;
+        text-transform: uppercase;
+        width: 120px;
+        margin-left: 5%;
+        margin-top: -100px;
+        margin-bottom: 5%;
+}
+
+.start-button:hover{
+    background-color: white;
+    color: #4e0eff;
+}

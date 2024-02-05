@@ -1,0 +1,85 @@
+/* Project.css */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.project-page {
+    display: flex;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #131324;
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.project-item {
+    display: flex;
+    width: 100%;
+    background-color: #00000076;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border: 0.1rem solid ;
+}
+
+.project-details {
+    flex: 1;
+    padding: 20px;
+}
+
+.project-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    color: #4e0eff;
+    font-size: 40px;
+    margin-bottom: 40px;
+    margin-left: 50px;
+    /* font-family: 'Josefin Sans', sans-serif; */
+}
+
+p {
+    color: white;
+    width: 65%;
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+img {
+    max-width: 85%;
+    height: 85%;
+    border-radius: 10%;
+}
+
+/* Alternate sides styling */
+.project-item.left .project-details {
+    order: 2;
+}
+
+.project-item.left .project-image {
+    order: 1;
+}
+
+.project-item.right .project-details {
+    order: 1;
+}
+
+.project-item.right .project-image {
+    order: 2;
+}

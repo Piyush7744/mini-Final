@@ -38,3 +38,34 @@ module.exports.login = async (req, res, next) => {
         next(ex);
     }
 };
+
+// module.exports.logOut = (req, res, next) => {
+//     try {
+//         if (!req.params.id) return res.json({ msg: "User id is required " });
+//         onlineUsers.delete(req.params.id);
+//         return res.status(200).send();
+//     } catch (ex) {
+//         next(ex);
+//     }
+// };
+
+// Assuming onlineUsers is an array
+let onlineUsers = [];
+
+module.exports.logOut = (req, res, next) => {
+    try {
+        if (!req.params.id) return res.json({ msg: "User id is required " });
+
+        const userId = req.params.id;
+        const userIndex = onlineUsers.findIndex(user => user.id === userId);
+
+        if (userIndex !== -1) {
+            onlineUsers.splice(userIndex, 1);
+        }
+
+        return res.status(200).send();
+    } catch (ex) {
+        next(ex);
+    }
+};
+
