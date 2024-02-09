@@ -4,10 +4,12 @@ import Footer from '../components/Footer/Footer'
 import Navbar from '../components/Navbar/Navbar'
 import Logo from "../assets/logo.svg";
 import Canvas from "../components/Canvas/Canvas";
+// import { logtoggle } from '../contexts/logtoggle';
 
 
 function Chat() {
   const [showCanvas, setShowCanvas] = useState(false);
+
 
   const handleButtonClick = async () => {
     setShowCanvas(!showCanvas);
@@ -27,7 +29,6 @@ function Chat() {
       </div>
       <Footer />
     </div>
-
   )
 }
 
