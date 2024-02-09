@@ -1,27 +1,32 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { BiPowerOff } from "react-icons/bi";
 import styled from "styled-components";
 import axios from "axios";
 import { logoutRoute } from "../utils/APIRoutes";
-export default function Logout() {
+import { logtoggle } from "../contexts/logtoggle";
+
+const Logout = () => {
     const navigate = useNavigate();
+    const {setLoggedIn} = useContext(logtoggle);
+
     const handleClick = async () => {
-        const id = await JSON.parse(
-            localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)
-        )._id;
-        const data = await axios.get(`${logoutRoute}/${id}`);
-        if (data.status === 200) {
+        const id = JSON.parse(localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY))._id;
+        const { status } = await axios.get(`${logoutRoute}/${id}`);
+        if (status === 200) {
             localStorage.clear();
+            setLoggedIn(false);
             navigate("/login");
         }
     };
+
     return (
         <Button onClick={handleClick}>
             <BiPowerOff />
         </Button>
     );
 }
+
 
 const Button = styled.button`
   display: flex;
@@ -37,3 +42,5 @@ const Button = styled.button`
     color: #ebe7ff;
   }
 `;
+
+export default Logout;
