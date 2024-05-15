@@ -1,15 +1,13 @@
-// WebcamStream.jsx
 import React, { useRef, useEffect } from 'react';
 import './WebcamStream.css';
-import '../Canvas/Canvas.css'
 
-const WebcamStream = () => {
+const WebcamStream = ({ url }) => {
     const videoRef = useRef(null);
 
     useEffect(() => {
         const startVideoStream = async () => {
             try {
-                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user' } });
                 if (videoRef.current) {
                     videoRef.current.srcObject = stream;
                 }
