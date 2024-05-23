@@ -9,19 +9,19 @@
 //           <h3>Smart Board using Hand Gesture</h3>
 //           <p>Smart Board using Hand Gesture is teachnology where user can print or write anything on the board using hsi/her Hand Gestures. </p>
 //           <ul className="socials">
-//             <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-//             <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-//             <li><a href="#"><i className="fa fa-google-plus"></i></a></li>
-//             <li><a href="#"><i className="fa fa-youtube"></i></a></li>
-//             <li><a href="#"><i className="fa fa-linkedin-square"></i></a></li>
+//             <li><Link to="#"><i className="fa fa-facebook"></i></Link></li>
+//             <li><Link to="#"><i className="fa fa-twitter"></i></Link></li>
+//             <li><Link to="#"><i className="fa fa-google-plus"></i></Link></li>
+//             <li><Link to="#"><i className="fa fa-youtube"></i></Link></li>
+//             <li><Link to="#"><i className="fa fa-linkedin-square"></i></Link></li>
 //           </ul>
 //         </div>
 //         <div className="footer-bottom">
-//           <p>copyright &copy; 2023 <a href="#">Smart Board using Hand Gesture</a>  </p>
+//           <p>copyright &copy; 2023 <Link to="#">Smart Board using Hand Gesture</Link>  </p>
 //           <div className="footer-menu">
 //             <ul className="f-menu">
-//               <li><a href="/">Home</a></li>
-//               <li><a href="/project">How to use</a></li>
+//               <li><Link to="/">Home</Link></li>
+//               <li><Link to="/project">How to use</Link></li>
 //             </ul>
 //           </div>
 //         </div>
@@ -37,6 +37,7 @@
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import React from 'react';
 import "./Footer.css";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -46,19 +47,19 @@ const Footer = () => {
           <h3>Smart Board using Hand Gesture</h3>
           <p>Smart Board using Hand Gesture is technology where users can print or write anything on the board using their Hand Gestures.</p>
           <ul className="socials">
-            <li><a href="https://www.facebook.com"><i className="fa fa-facebook"></i></a></li>
-            <li><a href="https://twitter.com"><i className="fa fa-twitter"></i></a></li>
-            <li><a href="https://plus.google.com"><i className="fa fa-google-plus"></i></a></li>
-            <li><a href="https://www.youtube.com"><i className="fa fa-youtube"></i></a></li>
-            <li><a href="https://www.linkedin.com"><i className="fa fa-linkedin-square"></i></a></li>
+            <li><Link to="https://www.facebook.com"><i className="fa-brands fa-facebook"></i></Link></li>
+            <li><Link to="https://twitter.com"><i class="fa-brands fa-x-twitter"></i></Link></li>
+            <li><Link to="https://plus.google.com"><i class="fa-brands fa-google-plus"></i></Link></li>
+            <li><Link to="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></Link></li>
+            <li><Link to="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></Link></li>
           </ul>
         </div>
         <div className="footer-bottom">
-          <p>Copyright &copy; 2023 <a href="/">Smart Board using Hand Gesture</a></p>
+          <p>Copyright &copy; 2023 <Link to="/">Smart Board using Hand Gesture</Link></p>
           <div className="footer-menu">
             <ul className="f-menu">
-              <li><a href="/">Home</a></li>
-              <li><a href="/project">How to use</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/project">How to use</Link></li>
             </ul>
           </div>
         </div>
